@@ -1,0 +1,157 @@
+<nav class="navbar navbar-expand-lg shadow bg-light ">
+  <div class="container-fluid m">
+    <a class="navbar-brand" href="#"><span class="text-primary">facebook</span></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+
+        <li class="nav-item">
+          <a class="nav-link link-size" routerLink="/project" routerLinkActive="active">Project Management</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link link-size" routerLink="/timesheet" routerLinkActive="active">Timesheet Management</a>
+        </li>
+        <!-- <li class="nav-item">
+          <a class="nav-link" href="#about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#services">Services</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#portfolio">Portfolio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#team">Team</a>
+        </li> -->
+        <li class="nav-item">
+          <div class="btn btn-primary my-btn">
+          <a class="nav-link" routerLink="/signin"> <i class="bi bi-box-arrow-in-right mr-2"></i> logout</a>
+          </div>
+        </li>
+
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid mt-4">
+  <div class="row">
+    <div class="col-md-3">
+      <div class="" >
+        <form [formGroup]="projectForm">
+          <h3>Project Management</h3>
+          <div class="form-group mt-3">
+            <label for="projectName">Project Name</label>
+            <input type="text" class="form-control" id="projectName" formControlName="projectName">
+          </div>
+          <div class="form-group">
+            <label for="username">Project Manager</label>
+            <select class="form-control" id="username" formControlName="username">
+              <option *ngFor="let role of roles" [value]="role.username">{{ role.username }}</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="startDate">Start Date</label>
+            <input type="date" class="form-control" id="startDate" formControlName="startDate">
+          </div>
+          <div class="form-group">
+            <label for="endDate">End Date</label>
+            <input type="date" class="form-control" id="endDate" formControlName="endDate">
+            <button type="button" class="btn btn-primary myb mt-2 w-100" [disabled]="projectForm.invalid"
+              (click)="createProject()">Submit</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="col-md-9">
+      <div class="row mb-2">
+        <div class="col-md-4">
+          search:
+            <input type="text"   >
+        </div>
+
+      </div>
+      <table class="table table-bordered ">
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>Project Name</th>
+            <th>Project Manager</th>
+
+            <th>Start Date </th>
+            <th>End Date</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let project of projects">
+            <td>{{ project.id }}</td>
+            <td>{{ project.projectName }}</td>
+            <td>{{ project.username }}</td>
+            <td>{{ project.startDate | date:'dd-MM-yyyy' }}</td>
+            <td>{{ project.endDate | date:'dd-MM-yyyy' }}</td>
+            <td>
+              <button class="btn btn-warning btn-sm text-white" style="margin-right: 4px !important;"><i class="bi bi-pencil "></i></button>
+              <button class="btn btn-danger btn-sm" (click)="deleteProject(project.id)"><i class="bi bi-trash"></i></button>
+            </td>
+          </tr>
+          <tr *ngIf="projects.length == 0">
+            <td colspan="10" class="text-center">
+              No Data found
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+
+
+
+</div>
+
+<!-- Bootstrap Modal for Success Message -->
+<div class="modal fade" id="successModal" tabindex="-1" role="dialog" aria-labelledby="successModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="successModalLabel">Success!</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Project created successfully!
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Button trigger modal -->
+
+
+<div class="modal fade" [style]="modelstyle" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title  fs-5 text-success" id="exampleModalLabel" > <i class="bi bi-check2-circle"></i>Success</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" ></button>
+      </div>
+      <div class="modal-body">
+       <p>hello</p>
+      </div>
+
+    </div>
+  </div>
+</div>
+<!-- <button class="btn btn-success" style="margin: 0 5px;" data-bs-toggle="modal" data-bs-target="#exampleModal" ><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye" viewBox="0 0 16 16">
+                <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z"/>
+                <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z"/>
+              </svg></button> -->

@@ -1,0 +1,81 @@
+/* Style the form */
+form {
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* h2 {
+  text-align: center;
+} */
+
+/* Style form inputs */
+.form-group {
+  margin-bottom: 15px;
+}
+
+/* label {
+  display: block;
+  font-weight: bold;
+} */
+
+/* input,
+select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  box-sizing: border-box;
+} */
+
+/* Style buttons */
+/* button {
+  margin-right: 10px;
+} */
+
+/* button .btn-primary {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  box-sizing: border-box;
+  cursor: pointer;
+} */
+.btn-primary {
+  background-color: #007bff;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+.btn-secondary {
+  background-color: #6c757d;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+.my-btn {
+  border-radius: 50px;
+  padding: 0px 6px !important;
+}
+
+.my-btn a {
+  color: white;
+}
+
+.link-size {
+  font-weight: 500;
+
+}
+
+.shadow {
+  box-shadow: 0 .5rem 1rem #00000026 !important;
+}
+
+.text-primary {
+  font-weight: bold;
+}
+
+

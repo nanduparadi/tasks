@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="row main-div">
+    <div class="col-md-6 subject">
+      <p class="text-primary main-subject">facebook management</p>
+      <h5>Connect with friends and the world<br>around you on Facebook.</h5>
+    </div>
+    <div class="col-md-6 ">
+      <div class="second-div ">
+        <form [formGroup]="signinForm" (ngSubmit)="onSubmit()" class=" p-3 ">
+          <h3 class=" form-heading">Sign in</h3>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" formControlName="email" class="form-control">
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" formControlName="password" class="form-control">
+          </div>
+          <button type="submit" class="btn btn-primary mt-2 my-btn" [disabled]="signinForm.invalid">Sign In</button>
+          <p class="mt-2">Need an account ? <a class="acc-open" routerLink="/signup">Sign up</a></p>
+
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

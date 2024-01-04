@@ -1,0 +1,107 @@
+{
+  "users": [
+    {
+      "username": "System",
+      "role": "admin",
+      "email": "df@gmail.com",
+      "password": "SharpGurus1$",
+      "id": 1
+    },
+    {
+      "username": "janu",
+      "role": "manager",
+      "email": "david@gmail.com",
+      "password": "SharpGurus1$",
+      "id": 2
+    },
+    {
+      "username": "srinu",
+      "role": "manager",
+      "email": "nandhuparadhi1234+1@gmail.com",
+      "password": "SharpGurus1$",
+      "id": 3
+    },
+    {
+      "username": "mahesh",
+      "role": "manager",
+      "email": "mahesh@gmail.com",
+      "password": "SharpGurus1$",
+      "id": 4
+    },
+    {
+      "username": "manoj",
+      "role": "manager",
+      "email": "manoj@gmail.com",
+      "password": "manoj",
+      "id": 5
+    },
+    {
+      "username": "hari",
+      "role": "manager",
+      "email": "hari@gmial.com",
+      "password": "harihari",
+      "id": 6
+    },
+    {
+      "username": "santosh",
+      "role": "admin",
+      "email": "san@gmail.com",
+      "password": "santosh",
+      "id": 7
+    },
+    {
+      "username": "banu",
+      "role": "manager",
+      "email": "banu@gmail.com",
+      "password": "banubanu",
+      "id": 8
+    }
+  ],
+  "projects": [
+    {
+      "projectName": "tcs",
+      "startDate": "2024-01-18",
+      "endDate": "2024-01-19",
+      "username": "srinu",
+      "id": 1
+    },
+    {
+      "projectName": "flipcart",
+      "startDate": "2024-01-19",
+      "endDate": "2024-01-27",
+      "username": "manoj",
+      "id": 2
+    }
+  ],
+  "timesheets": [
+    {
+      "days": {
+        "monday": 2,
+        "tuesday": 5,
+        "wednesday": 6,
+        "thursday": 7,
+        "friday": 8,
+        "saturday": 7,
+        "sunday": 6
+      },
+      "total": 41,
+      "id": 1
+    },
+    {
+      "days": {
+        "monday": 1,
+        "tuesday": 3,
+        "wednesday": 5,
+        "thursday": 5,
+        "friday": 5,
+        "saturday": 5,
+        "sunday": 5
+      },
+      "total": 29,
+      "id": 2
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

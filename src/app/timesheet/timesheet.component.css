@@ -1,0 +1,33 @@
+.table-container {
+  overflow-x: auto;
+  max-width: 100%;
+}
+
+.table {
+  width: 100%;
+  /* Ensure the table takes 100% width of its container */
+  white-space: nowrap;
+  /* Prevent line breaks in table cells */
+}
+
+.shadow {
+  box-shadow: 0 .5rem 1rem #00000026 !important;
+}
+
+.text-primary {
+  font-weight: bold;
+}
+
+.link-size {
+  font-weight: 500;
+
+}
+
+.my-btn {
+  border-radius: 50px;
+  padding: 0px 6px !important;
+}
+
+.my-btn a {
+  color: white;
+}

@@ -1,0 +1,129 @@
+<!-- <div class="container mt-4">
+  <h3>Weekly Timesheet</h3>
+
+  <form [formGroup]="timesheetForm" class="w-75">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Day</th>
+          <th>Hours</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let day of ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']">
+          <td>{{ day }}</td>
+          <td>
+            <input type="number" class="form-control" [id]="day.toLowerCase()" [formControlName]="day.toLowerCase()" />
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <button type="submit" class="btn btn-primary" (click)="onSubmit()">Submit Timesheet</button>
+  </form>
+</div> -->
+<nav class="navbar navbar-expand-lg shadow bg-light ">
+  <div class="container-fluid m">
+    <a class="navbar-brand" href="#"><span class="text-primary">facebook</span></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+
+        <li class="nav-item">
+          <a class="nav-link link-size" routerLink="/project" routerLinkActive="active">Project Management</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link link-size" routerLink="/timesheet" routerLinkActive="active">Timesheet Management</a>
+        </li>
+        <!-- <li class="nav-item">
+          <a class="nav-link" href="#about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#services">Services</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#portfolio">Portfolio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#team">Team</a>
+        </li> -->
+        <li class="nav-item">
+          <div class="btn btn-primary my-btn">
+          <a class="nav-link" routerLink="/signin"> <i class="bi bi-box-arrow-in-right " style="margin-right: 4px !important;"></i>logout</a>
+          </div>
+        </li>
+
+      </ul>
+
+    </div>
+  </div>
+</nav>
+<div class="container-fluid">
+  <div class=" row mt-4">
+  <div class="col-md-4 p-0 px-2">
+    <h4 class="">Time Sheets Worklog</h4>
+  </div>
+  <div class="col-md-4">
+    <!-- <div class="d-flex">
+      <a class=" pointer"><i class="fas fa-chevron-left"></i> </a>
+      <label for="">Start date:</label>
+      <input type="date" class="form-control " />
+            <label for="">End date:</label>
+
+      <input type="date" class="form-control " />
+
+
+      <a class="pointer"> <i class="fas fa-chevron-right"></i></a>
+    </div> -->
+  </div>
+  <div class="col-md-4">
+    <button class="btn btn-primary btn-sm float-end mb-3" (click)="onSubmit()">Submit Timesheet</button>
+  </div>
+</div>
+
+<form [formGroup]="timesheetForm" >
+  <table class="table table-responsive table-container">
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Employee Name</th>
+      <th>Mon</th>
+      <th>Tue</th>
+      <th>Wed</th>
+      <th>Thu</th>
+      <th>Fri</th>
+      <th>Sat</th>
+      <th>Sun</th>
+      <th>Total</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>Glen Maxwell</td>
+      <!-- <td><input (click)="calculateTime()" type="number" class="form-control" formControlName="monday" min="0" max="8" required></td>
+      <td><input (click)="calculateTime()" type="number" class="form-control" formControlName="tuesday" min="0" max="8" required></td>
+      <td><input (click)="calculateTime()" type="number" class="form-control" formControlName="wednesday" min="0" max="8" required></td>
+      <td><input (click)="calculateTime()" type="number" class="form-control" formControlName="thursday" min="0" max="8" required></td>
+      <td><input (click)="calculateTime()" type="number" class="form-control" formControlName="friday" min="0" max="8" required></td>
+      <td><input (click)="calculateTime()" type="number" class="form-control" formControlName="saturday" min="0" max="8" required></td>
+      <td><input (click)="calculateTime()" type="number" class="form-control" formControlName="sunday" min="0" max="8" required></td> -->
+
+      <td><input [(ngModel)]="dayValues.monday" (ngModelChange)="calculateTime()" type="number" class="form-control" formControlName="monday" min="0" max="8" required></td>
+<td><input [(ngModel)]="dayValues.tuesday" (ngModelChange)="calculateTime()" type="number" class="form-control" formControlName="tuesday" min="0" max="8" required></td>
+<td><input [(ngModel)]="dayValues.wednesday" (ngModelChange)="calculateTime()" type="number" class="form-control" formControlName="wednesday" min="0" max="8" required></td>
+<td><input [(ngModel)]="dayValues.thursday" (ngModelChange)="calculateTime()" type="number" class="form-control" formControlName="thursday" min="0" max="8" required></td>
+<td><input [(ngModel)]="dayValues.friday" (ngModelChange)="calculateTime()" type="number" class="form-control" formControlName="friday" min="0" max="8" required></td>
+<td><input [(ngModel)]="dayValues.saturday" (ngModelChange)="calculateTime()" type="number" class="form-control" formControlName="saturday" min="0" max="8" required></td>
+<td><input [(ngModel)]="dayValues.sunday" (ngModelChange)="calculateTime()" type="number" class="form-control" formControlName="sunday" min="0" max="8" required></td>
+
+      <td >{{totalWeekTimeSpent}}</td>
+    </tr>
+  </tbody>
+</table>
+</form>
+</div>
+
+
