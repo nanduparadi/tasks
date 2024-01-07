@@ -1,0 +1,17 @@
+.navbar {
+  background-color: #31336e;
+}
+
+.my-btn {
+  border-radius: 50px;
+  padding: 0px 6px !important;
+}
+
+.my-btn a {
+  color: white;
+}
+
+.link-size {
+  font-weight: 500;
+
+}

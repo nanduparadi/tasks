@@ -22,20 +22,22 @@
     <button type="submit" class="btn btn-primary" (click)="onSubmit()">Submit Timesheet</button>
   </form>
 </div> -->
-<nav class="navbar navbar-expand-lg shadow bg-light ">
+<nav class="navbar navbar-expand-lg shadow  ">
   <div class="container-fluid m">
-    <a class="navbar-brand" href="#"><span class="text-primary">facebook</span></a>
+    <a class="navbar-brand" href="#"><span class="text-white">PLM</span></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-
-        <li class="nav-item">
-          <a class="nav-link link-size" routerLink="/project" routerLinkActive="active">Project Management</a>
+         <li class="nav-item ">
+          <a class="nav-link link-size text-white" routerLink="/admin" routerLinkActive="active">Administration Management</a>
+        </li>
+        <li class="nav-item ">
+          <a class="nav-link link-size text-white" routerLink="/project" routerLinkActive="active">Project Management</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link link-size" routerLink="/timesheet" routerLinkActive="active">Timesheet Management</a>
+          <a class="nav-link link-size text-white" routerLink="/timesheet" routerLinkActive="active">Timesheet Management</a>
         </li>
         <!-- <li class="nav-item">
           <a class="nav-link" href="#about">About</a>
@@ -102,7 +104,7 @@
   <tbody>
     <tr>
       <td>1</td>
-      <td>Glen Maxwell</td>
+      <td>Json Roy</td>
       <!-- <td><input (click)="calculateTime()" type="number" class="form-control" formControlName="monday" min="0" max="8" required></td>
       <td><input (click)="calculateTime()" type="number" class="form-control" formControlName="tuesday" min="0" max="8" required></td>
       <td><input (click)="calculateTime()" type="number" class="form-control" formControlName="wednesday" min="0" max="8" required></td>

@@ -11,6 +11,7 @@ import { TimesheetComponent } from './timesheet/timesheet.component';
 import { ProjectManagementComponent } from './project-management/project-management.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { SuccessModalComponent } from './success-modal/success-modal.component';
+import { AdministrationComponent } from './administration/administration.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { SuccessModalComponent } from './success-modal/success-modal.component';
     TimesheetComponent,
     ProjectManagementComponent,
     NavbarComponent,
-    SuccessModalComponent
+    SuccessModalComponent,
+    AdministrationComponent
   ],
   imports: [
     BrowserModule,

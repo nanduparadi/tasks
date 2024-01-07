@@ -1,14 +1,9 @@
-/* Style the form */
 form {
   background-color: #f8f9fa;
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-
-/* h2 {
-  text-align: center;
-} */
 
 /* Style form inputs */
 .form-group {
@@ -42,19 +37,19 @@ select {
   box-sizing: border-box;
   cursor: pointer;
 } */
-.btn-primary {
+/* .btn-primary {
   background-color: #007bff;
   border: none;
   color: #fff;
   cursor: pointer;
-}
+} */
 
-.btn-secondary {
+/* .btn-secondary {
   background-color: #6c757d;
   border: none;
   color: #fff;
   cursor: pointer;
-}
+} */
 
 .my-btn {
   border-radius: 50px;
@@ -74,8 +69,10 @@ select {
   box-shadow: 0 .5rem 1rem #00000026 !important;
 }
 
-.text-primary {
+/* .text-primary {
   font-weight: bold;
+} */
+
+.navbar {
+  background-color: #31336e;
 }
-
-

@@ -55,6 +55,20 @@
       "email": "banu@gmail.com",
       "password": "banubanu",
       "id": 8
+    },
+    {
+      "username": "asdf-am",
+      "role": "employee",
+      "email": "hari@gmial.com",
+      "password": "SharpGurus1$",
+      "id": 9
+    },
+    {
+      "username": "david warner",
+      "role": "employee",
+      "email": "david@gmail.com",
+      "password": "helloworld",
+      "id": 10
     }
   ],
   "projects": [
@@ -71,6 +85,20 @@
       "endDate": "2024-01-27",
       "username": "manoj",
       "id": 2
+    },
+    {
+      "projectName": "comcast",
+      "startDate": "2024-01-09",
+      "endDate": "2024-01-20",
+      "username": "manoj",
+      "id": 3
+    },
+    {
+      "projectName": "tcs",
+      "startDate": "2024-01-04",
+      "endDate": "2024-01-12",
+      "username": "mahesh",
+      "id": 4
     }
   ],
   "timesheets": [
