@@ -22,16 +22,23 @@ export class ApiService {
   storeProjects(user: any): Observable<any> {
     return this.http.post(this.projectUrl, user);
   }
-  getProjects(){
+  getProjects() {
     return this.http.get(this.projectUrl)
   }
   timesheetApi(t: any): Observable<any> {
     return this.http.post(this.timesheetUrl, t);
   }
+  // updateProject(id: number, updatedProject: any): Observable<any> {
+  //   const updateUrl = `${this.projectUrl}/${id}`;
+  //   return this.http.put(updateUrl,id);
+  // }
   updateProject(id: number, updatedProject: any): Observable<any> {
     const updateUrl = `${this.projectUrl}/${id}`;
+    console.log('Update URL:', updateUrl);
+    console.log('Updated Project Data:', updatedProject);
     return this.http.put(updateUrl, updatedProject);
   }
+
   deleteProject(id: number): Observable<any> {
     const deleteUrl = `${this.projectUrl}/${id}`;
     return this.http.delete(deleteUrl);

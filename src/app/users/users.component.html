@@ -1,0 +1,32 @@
+  <table class="table table-bordered ">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Role type</th>
+            <!-- <th>Project Manager</th>
+            <th>Start Date </th>
+            <th>End Date</th>
+            <th>Action</th> -->
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let project of roles">
+            <td>{{ project.username }}</td>
+            <td>{{ project.role }}</td>
+            <!-- <td>{{ project.username }}</td>
+            <td>{{ project.startDate | date:'dd-MM-yyyy' }}</td>
+            <td>{{ project.endDate | date:'dd-MM-yyyy' }}</td> -->
+            <!-- <td>
+              <button class="btn btn-warning btn-sm text-white" style="margin-right: 4px !important;"
+                (click)="editUser(project)"><i class="bi bi-pencil "></i></button>
+              <button class="btn btn-danger btn-sm" (click)="deleteProject(project.id)"><i
+                  class="bi bi-trash"></i></button>
+            </td> -->
+          </tr>
+          <tr *ngIf="roles.length == 0">
+            <td colspan="10" class="text-center">
+              No Data found
+            </td>
+          </tr>
+        </tbody>
+      </table>

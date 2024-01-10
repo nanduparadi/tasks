@@ -12,6 +12,11 @@ import { ProjectManagementComponent } from './project-management/project-managem
 import { NavbarComponent } from './navbar/navbar.component';
 import { SuccessModalComponent } from './success-modal/success-modal.component';
 import { AdministrationComponent } from './administration/administration.component';
+import { SidePanelComponent } from './side-panel/side-panel.component';
+import { ProjectsComponent } from './projects/projects.component';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { UsersComponent } from './users/users.component';
+
 
 @NgModule({
   declarations: [
@@ -22,14 +27,18 @@ import { AdministrationComponent } from './administration/administration.compone
     ProjectManagementComponent,
     NavbarComponent,
     SuccessModalComponent,
-    AdministrationComponent
+    AdministrationComponent,
+    SidePanelComponent,
+    ProjectsComponent,
+    UsersComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    Ng2SearchPipeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

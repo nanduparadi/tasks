@@ -1,0 +1,25 @@
+/* side-panel.component.css */
+.side-panel {
+  width: 200px;
+  background-color: #f1f1f1;
+  padding: 15px;
+}
+
+.side-panel ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.side-panel li {
+  margin-bottom: 10px;
+}
+
+.side-panel a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+.side-panel a:hover {
+  color: #555;
+}

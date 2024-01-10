@@ -1,19 +1,23 @@
 <nav class="navbar navbar-expand-lg shadow  ">
   <div class="container-fluid m">
     <a class="navbar-brand" href="#"><span class="text-white">PLM</span></a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-         <li class="nav-item ">
-          <a class="nav-link link-size text-white" routerLink="/admin" routerLinkActive="active">Administration Management</a>
+        <li class="nav-item ">
+          <a class="nav-link link-size text-white" routerLink="/admin" routerLinkActive="active">Administration
+            Management</a>
         </li>
         <li class="nav-item ">
-          <a class="nav-link link-size text-white" routerLink="/project" routerLinkActive="active">Project Management</a>
+          <a class="nav-link link-size text-white" routerLink="/project" routerLinkActive="active">Project
+            Management</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link link-size text-white" routerLink="/timesheet" routerLinkActive="active">Timesheet Management</a>
+          <a class="nav-link link-size text-white" routerLink="/timesheet" routerLinkActive="active">Timesheet
+            Management</a>
         </li>
         <!-- <li class="nav-item">
           <a class="nav-link" href="#about">About</a>
@@ -27,16 +31,97 @@
         <li class="nav-item">
           <a class="nav-link" href="#team">Team</a>
         </li> -->
-        <li class="nav-item">
+        <!-- <li class="nav-item">
           <div class="btn btn-primary my-btn">
-          <a class="nav-link" routerLink="/signin"> <i class="bi bi-box-arrow-in-right " style="margin-right: 4px !important;"></i>logout</a>
+            <a class="nav-link" routerLink="/signin"> <i class="bi bi-box-arrow-in-right "
+                style="margin-right: 4px !important;"></i>logout</a>
           </div>
-        </li>
+        </li> -->
 
       </ul>
 
     </div>
   </div>
 </nav>
-<p>administration works!</p>
+<div class="container-fluid mt-4">
+  <div class="row">
+    <!-- <div class="col-md-3">
+      <div class="">
+        <form [formGroup]="projectForm">
+          <h3>Project Management</h3>
+          <div class="form-group mt-3">
+            <label for="projectName">Project Name</label>
+            <input type="text" class="form-control" id="projectName" formControlName="projectName">
+          </div>
+          <div class="form-group">
+            <label for="username">Project Manager</label>
+            <select class="form-control" id="username" formControlName="username">
+              <option *ngFor="let role of roles" [value]="role.username">{{ role.username }}</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="startDate">Start Date</label>
+            <input type="date" class="form-control" id="startDate" formControlName="startDate">
+          </div>
+          <div class="form-group">
+            <label for="endDate">End Date</label>
+            <input type="date" class="form-control" id="endDate" formControlName="endDate">
+            <button type="button" class="btn btn-primary myb mt-2 w-100" [disabled]="projectForm.invalid"
+              (click)="createProject()">Submit</button>
+          </div>
+        </form>
+      </div>
+    </div> -->
+    <div class="col-md-2">
+      <!-- side-panel.component.html -->
+<div class="side-panel">
+  <h4>Admin References</h4>
+  <ul>
+    <li routerLink="/ap"><a  class="active"><i class="bi bi-house-door-fill" style="margin-right: 3px;"></i>Projects</a></li>
+    <li routerLink="/users"><a > <i class="bi bi-people" style="margin-right: 3px;"></i>Users</a></li>
+    <li routerLink="/timesheet"><a><i class="bi bi-card-list" style="margin-right: 3px;"></i>Timesheets </a></li>
+  </ul>
+</div>
+
+    </div>
+    <div class="col-md-10">
+      <div class="row">
+
+        <div class="col-md-3" >
+          <div class="card border-dark mb-3 custom-card">
+            <div class="card-body text-dark">
+              <i class="bi bi-book-half" style="font-size: 2em;"></i>
+              <h5 class="card-title">Projects</h5>
+            </div>
+          </div>
+        </div>
+        <!-- routerLink="/signup" -->
+        <div class="col-md-3" >
+          <div class="card border-dark mb-3 custom-card">
+            <div class="card-body text-dark">
+              <i class="bi bi-people" style="font-size: 2em;"></i>
+              <h5 class="card-title">Users</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card border-dark mb-3 custom-card">
+            <div class="card-body text-dark">
+              <i class="bi bi-card-list" style="font-size: 2em;"></i>
+              <h5 class="card-title">Timesheets</h5>
+            </div>
+          </div>
+        </div>
+         <div class="col-md-3">
+          <div class="card border-dark mb-3 custom-card">
+            <div class="card-body text-dark">
+              <i class="bi bi-award-fill" style="font-size: 2em;"></i>
+              <h5 class="card-title">Example text</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    </div>
 

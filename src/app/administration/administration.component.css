@@ -15,3 +15,80 @@
   font-weight: 500;
 
 }
+
+/* project form css start */
+form {
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.custom-card {
+  cursor: pointer;
+  max-width: 16rem;
+  text-align: center;
+  border-radius: 15px;
+  transition: color 0.3s ease, border-color 0.3s ease;
+  border: 2px solid #000;
+
+}
+
+/*
+.custom-card .card-body {
+  border-radius: 15px;
+}
+
+.custom-card .bi {
+  color: #000;
+}
+
+.custom-card:hover .bi {
+  color: #3498db;
+} */
+
+/* side-panel.component.css */
+.side-panel {
+  /* width: 200px; */
+  height: 100vh;
+  background-color: #E7E9EB;
+  padding: 15px;
+}
+
+.side-panel ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.side-panel li {
+  margin-bottom: 10px;
+  border-bottom: 1px solid rgb(49, 51, 110);
+
+  /* border-bottom: 1px solid rgb(108, 107, 107); */
+}
+
+.side-panel a {
+  text-decoration: none;
+  /* color: #333; */
+  color: black;
+  /* font-weight: bold; */
+}
+
+.side-panel li:hover {
+  background-color: #cccccc;
+  cursor: pointer;
+
+}
+
+/* .side-panel a.active {
+  background-color: #04AA6D !important;
+  color: #ffffff !important;
+} */
+
+.side-panel li:hover a {
+  /* color: #fff; */
+}

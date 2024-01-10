@@ -5,18 +5,23 @@ import { SigninComponent } from './signin/signin.component';
 import { TimesheetComponent } from './timesheet/timesheet.component';
 import { ProjectManagementComponent } from './project-management/project-management.component';
 import { AdministrationComponent } from './administration/administration.component';
+import { ProjectsComponent } from './projects/projects.component';
+import { UsersComponent } from './users/users.component';
 
 const routes: Routes = [{path:'',redirectTo:'signup',pathMatch:'full'},
   {path:'signup',component:SignupComponent},
   {path:'signin',component:SigninComponent},
   {path:'timesheet',component:TimesheetComponent},
   {path:'project',component:ProjectManagementComponent},
-  {path: 'admin',component:AdministrationComponent}
+  {path: 'users',component:UsersComponent},
+  { path: 'admin', component: AdministrationComponent },
+
+  {path:"ap",component:ProjectsComponent}
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+exports: [RouterModule]
 })
 export class AppRoutingModule {
 
