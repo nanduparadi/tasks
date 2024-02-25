@@ -1,0 +1,143 @@
+<div class="container-fluid p-3 ">
+  <h1 class="shadow-sm rounded p-3">Product Management</h1>
+
+  <button type="button" class="btn btn-primary float-end mb-2" (click)="resetForm()" data-toggle="modal"
+    data-target="#exampleModal">
+    + Add Product
+  </button>
+
+  <div class="w-25 mb-4" style="margin: 0 auto;">
+    <form *ngIf="showForm" [formGroup]="productForm" class="alertBox">
+      <div class="row">
+        <div class="col">
+          <h4>Update Product</h4>
+        </div>
+        <div class="col">
+          <span class="float-end close" (click)="closeDialogBox()">&times;</span>
+        </div>
+        <hr>
+      </div>
+
+      <div class="form-group">
+        <label for="exampleInputEmail1">Product Name</label>
+        <input type="text" id="productName" formControlName="productName" name="productName" class="form-control"
+          [class.is-invalid]="productName.invalid && (productName.dirty || productName.touched)">
+        <div *ngIf="productName.invalid && (productName.dirty || productName.touched)" class="invalid-feedback">
+          <div *ngIf="productName.errors?.['required']">
+            This field is required.
+          </div>
+          <div *ngIf="productName.errors?.['minlength']">
+            This field must have at least 1 character.
+          </div>
+          <div *ngIf="productName.errors?.['specialCharacter']">
+            Special characters are not allowed.
+          </div>
+        </div>
+      </div>
+
+      <button type="submit" class="btn btn-primary" (click)="updateProductt()">Update</button>
+    </form>
+  </div>
+
+  <div class="w-25 mb-4" style="margin: 0 auto;">
+    <form *ngIf="showDuplicateForm" [formGroup]="productForm" class="alertBox">
+      <div class="row">
+        <div class="col">
+          <h4>Duplicate Product</h4>
+        </div>
+        <div class="col">
+          <span class="float-end close" (click)="closeDialogBox()">&times;</span>
+        </div>
+      </div>
+      <hr>
+
+      <div class="form-group">
+        <label for="exampleInputEmail1">Duplicate Name</label>
+        <input type="text" id="productName" name="productName" formControlName="productName" class="form-control"
+          [class.is-invalid]="productName.invalid && (productName.dirty || productName.touched)">
+        <div *ngIf="productName.invalid && (productName.dirty || productName.touched)" class="invalid-feedback">
+          <div *ngIf="productName.errors?.['required']">
+            This field is required.
+          </div>
+          <div *ngIf="productName.errors?.['minlength']">
+            This field must have at least 1 character.
+          </div>
+          <div *ngIf="productName.errors?.['specialCharacter']">
+            Special characters are not allowed.
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" (click)="closeDialogBox()">Close</button>
+        <button type="button" class="btn btn-primary" (click)="increment()">Duplicate</button>
+      </div>
+    </form>
+  </div>
+
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title" id="exampleModalLabel">Add Product </h2>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form [formGroup]="productForm">
+            <div class="form-group">
+              <label for="productName">Product Name:</label>
+              <input type="text" id="productName" class="form-control" name="productName" formControlName="productName"
+                [class.is-invalid]="productName.invalid && (productName.dirty || productName.touched)">
+
+              <div *ngIf="productName.invalid && (productName.dirty || productName.touched)" class="invalid-feedback">
+                <div *ngIf="productName.errors?.['required']">
+                  This field is required.
+                </div>
+                <div *ngIf="productName.errors?.['minlength']">
+                  This field must have at least 1 character.
+                </div>
+                <div *ngIf="productName.errors?.['specialCharacter']">
+                  Special characters are not allowed.
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" (click)="addDb()">Add</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Created date</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let product of products | paginate: { itemsPerPage: 10, currentPage: p }">
+        <td>{{ product.productName }}</td>
+        <td>{{ product.createdDate | date : 'dd/MM/yyyy' }}</td>
+        <td>
+          <span><i class="bi bi-pencil text-secondary iconStyle" (click)="updateProduct(product)"></i></span>&nbsp;
+          <button (click)="duplicateName()" class="iconStyle">Duplicate</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="col-sm-6 pull-right text-right">
+  		<pagination-controls (pageChange)="p = $event"></pagination-controls>
+  </div>
+
+</div>
+
+
+

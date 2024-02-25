@@ -1,86 +1,30 @@
 {
   "users": [
     {
-      "username": "System",
-      "role": "admin",
-      "email": "df@gmail.com",
-      "password": "SharpGurus1$",
-      "id": 1
+      "id": 15,
+      "name": "asd",
+      "description": "asd"
     },
     {
-      "username": "janu",
-      "role": "manager",
-      "email": "david@gmail.com",
-      "password": "SharpGurus1$",
-      "id": 2
+      "id": 16,
+      "name": "hii mama",
+      "description": "hello"
     },
     {
-      "username": "srinu",
-      "role": "manager",
-      "email": "nandhuparadhi1234+1@gmail.com",
-      "password": "SharpGurus1$",
-      "id": 3
+      "id": 18,
+      "name": "ela unav",
+      "description": "nvv"
     },
     {
-      "username": "mahesh",
-      "role": "manager",
-      "email": "mahesh@gmail.com",
-      "password": "SharpGurus1$",
-      "id": 4
-    },
-    {
-      "username": "manoj",
-      "role": "manager",
-      "email": "manoj@gmail.com",
-      "password": "manoj",
-      "id": 5
-    },
-    {
-      "username": "hari",
-      "role": "manager",
-      "email": "hari@gmial.com",
-      "password": "harihari",
-      "id": 6
-    },
-    {
-      "username": "santosh",
-      "role": "admin",
-      "email": "san@gmail.com",
-      "password": "santosh",
-      "id": 7
-    },
-    {
-      "username": "banu",
-      "role": "manager",
-      "email": "banu@gmail.com",
-      "password": "banubanu",
-      "id": 8
-    },
-    {
-      "username": "asdf-am",
-      "role": "employee",
-      "email": "hari@gmial.com",
-      "password": "SharpGurus1$",
-      "id": 9
-    },
-    {
-      "username": "david warner",
-      "role": "employee",
-      "email": "david@gmail.com",
-      "password": "helloworld",
-      "id": 10
-    },
-    {
-      "id": 11
-    },
-    {
-      "id": 12
-    },
-    {
-      "id": 13
-    },
-    {
-      "id": 14
+      "firstname": "adf",
+      "lastname": "dsf",
+      "email": "ds@gmai.com",
+      "username": "dsf",
+      "password": "dsf",
+      "mobile": "dsflk",
+      "doj": "2024-02-15",
+      "address": "dsf",
+      "id": 19
     }
   ],
   "projects": [
@@ -118,6 +62,69 @@
       "endDate": "2024-01-06",
       "username": "mahesh",
       "id": 5
+    },
+    {
+      "projectName": "ibm",
+      "startDate": "2024-01-05",
+      "endDate": "2024-01-19",
+      "username": "hari",
+      "id": 6
+    },
+    {
+      "projectName": "indium",
+      "startDate": "2024-01-06",
+      "endDate": "2024-01-18",
+      "username": "srinu",
+      "id": 7
+    },
+    {
+      "projectName": "comcast",
+      "startDate": "2024-01-19",
+      "endDate": "2024-01-20",
+      "username": "srinu",
+      "id": 8
+    },
+    {
+      "projectName": "amazon",
+      "startDate": "2024-01-09",
+      "endDate": "2024-01-20",
+      "username": "janu",
+      "id": 9
+    },
+    {
+      "projectName": "classmate",
+      "startDate": "2024-01-11",
+      "endDate": "2024-02-07",
+      "username": "hari",
+      "id": 10
+    },
+    {
+      "projectName": "dell",
+      "startDate": "2024-01-11",
+      "endDate": "2024-01-30",
+      "username": "mahesh",
+      "id": 11
+    },
+    {
+      "projectName": "tcss mamd",
+      "startDate": "2024-01-20",
+      "endDate": "2024-01-20",
+      "username": "srinu",
+      "id": 12
+    },
+    {
+      "projectName": "tcss mamd",
+      "startDate": "2024-01-20",
+      "endDate": "2024-01-20",
+      "username": "mahesh",
+      "id": 13
+    },
+    {
+      "projectName": "zomato",
+      "startDate": "2024-02-03",
+      "endDate": "2024-02-16",
+      "username": "undefined",
+      "id": 14
     }
   ],
   "timesheets": [
@@ -146,6 +153,211 @@
       },
       "total": 29,
       "id": 2
+    },
+    {
+      "days": {
+        "monday": 0,
+        "tuesday": 0,
+        "wednesday": 0,
+        "thursday": 0,
+        "friday": 0,
+        "saturday": 0,
+        "sunday": 0
+      },
+      "total": 0,
+      "id": 3
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "productName": "hello ",
+      "createdDate": "10/02/2024"
+    },
+    {
+      "id": 2,
+      "productName": "vivo",
+      "createdDate": "10/02/2024"
+    },
+    {
+      "id": 3,
+      "productName": "samsungg",
+      "createdDate": "10/02/2024"
+    },
+    {
+      "productName": "pen",
+      "createdDate": "10/02/2024",
+      "id": 4
+    },
+    {
+      "id": 5,
+      "productName": "key",
+      "createdDate": "11/02/2024"
+    },
+    {
+      "id": 6,
+      "productName": "tv cini",
+      "createdDate": "11/02/2024"
+    },
+    {
+      "id": 7,
+      "productName": "intel",
+      "createdDate": null
+    },
+    {
+      "id": 8,
+      "productName": "cap nike",
+      "createdDate": "12/02/2024"
+    },
+    {
+      "id": 9,
+      "productName": "puma",
+      "createdDate": "12/02/2024"
+    },
+    {
+      "id": 10,
+      "productName": "dsfjhjh",
+      "createdDate": null
+    },
+    {
+      "id": 11,
+      "productName": "adsfdsf",
+      "createdDate": "12/02/2024"
+    },
+    {
+      "id": 12,
+      "productName": "clasemate",
+      "createdDate": null
+    },
+    {
+      "id": 13,
+      "productName": "hjm ",
+      "createdDate": null
+    },
+    {
+      "id": 14,
+      "productName": "adsf",
+      "createdDate": null
+    },
+    {
+      "id": 15,
+      "productName": "dslfj",
+      "createdDate": null
+    },
+    {
+      "id": 16,
+      "productName": "sdklf",
+      "createdDate": null
+    },
+    {
+      "id": 17,
+      "productName": "adsf",
+      "createdDate": "13/02/2024"
+    },
+    {
+      "id": 18,
+      "productName": "dsf",
+      "createdDate": "2024-02-13"
+    },
+    {
+      "id": 19,
+      "productName": "hi",
+      "createdDate": "02/13/2024"
+    },
+    {
+      "id": 20,
+      "productName": "new name",
+      "createdDate": "2024-02-13"
+    },
+    {
+      "id": 21,
+      "productName": "watch",
+      "createdDate": "2024-02-13"
+    },
+    {
+      "id": 22,
+      "productName": "nowday",
+      "createdDate": "2024-02-13"
+    },
+    {
+      "id": 23,
+      "productName": "ads",
+      "createdDate": "2024-02-13"
+    },
+    {
+      "id": 24,
+      "productName": "hi ii",
+      "createdDate": "2024-02-13"
+    },
+    {
+      "id": 25
+    },
+    {
+      "id": 26,
+      "productName": "fastrack",
+      "createdDate": "2024-02-14"
+    },
+    {
+      "id": 27,
+      "productName": "oppo",
+      "createdDate": "2024-02-14"
+    },
+    {
+      "id": 28,
+      "productName": "charger",
+      "createdDate": "2024-02-14"
+    },
+    {
+      "id": 29,
+      "productName": "card invitation",
+      "createdDate": "2024-02-14"
+    },
+    {
+      "id": 30,
+      "productName": "ad",
+      "createdDate": "2024-02-15"
+    },
+    {
+      "id": 31,
+      "productName": "asdf",
+      "createdDate": "2024-02-16"
+    },
+    {
+      "id": 32,
+      "productName": "cipla",
+      "createdDate": "2024-02-16"
+    },
+    {
+      "id": 33,
+      "productName": "delton-16 /40",
+      "createdDate": "2024-02-19"
+    },
+    {
+      "id": 34,
+      "productName": "stay",
+      "createdDate": "2024-02-19"
+    },
+    {
+      "id": 35,
+      "productName": "cool",
+      "createdDate": "2024-02-19"
+    },
+    {
+      "id": 36,
+      "productName": "mama",
+      "createdDate": "2024-02-19"
+    },
+    {
+      "id": 37,
+      "productName": "kick",
+      "createdDate": "2024-02-19"
+    }
+  ],
+  "data": [
+    {
+      "id": 1,
+      "name": "asdsadfsdf",
+      "description": "sdf"
     }
   ],
   "profile": {

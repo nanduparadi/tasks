@@ -16,6 +16,18 @@ import { SidePanelComponent } from './side-panel/side-panel.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { UsersComponent } from './users/users.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { ChartComponent } from './chart/chart.component';
+import { ProductManagementComponent } from './product-management/product-management.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { DataComponent } from './data/data.component';
+import { MyTaskComponent } from './my-task/my-task.component';
+import { NgxPaginationModule } from 'ngx-pagination';
+import { TestComponent } from './test/test.component';
+import { ThomeComponent } from './thome/thome.component';
+import { TaboutComponent } from './tabout/tabout.component';
+
 
 
 @NgModule({
@@ -30,7 +42,15 @@ import { UsersComponent } from './users/users.component';
     AdministrationComponent,
     SidePanelComponent,
     ProjectsComponent,
-    UsersComponent
+    UsersComponent,
+    DashboardComponent,
+    ChartComponent,
+    ProductManagementComponent,
+    DataComponent,
+    MyTaskComponent,
+    TestComponent,
+    ThomeComponent,
+    TaboutComponent
   ],
   imports: [
     BrowserModule,
@@ -38,7 +58,10 @@ import { UsersComponent } from './users/users.component';
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-    Ng2SearchPipeModule
+    Ng2SearchPipeModule,
+    BrowserAnimationsModule,
+    MatFormFieldModule,
+    NgxPaginationModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,4 +1,84 @@
-  <table class="table table-bordered ">
+<nav class="navbar navbar-expand-lg shadow  ">
+  <div class="container-fluid m">
+    <a class="navbar-brand" href="#"><span class="text-white">PLM</span></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item ">
+          <a class="nav-link link-size text-white" routerLink="/admin" routerLinkActive="active">Administration
+            Management</a>
+        </li>
+        <li class="nav-item ">
+          <a class="nav-link link-size text-white" routerLink="/project" routerLinkActive="active">Project
+            Management</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link link-size text-white" routerLink="/timesheet" routerLinkActive="active">Timesheet
+            Management</a>
+        </li>
+        <!-- <li class="nav-item">
+          <a class="nav-link" href="#about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#services">Services</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#portfolio">Portfolio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#team">Team</a>
+        </li> -->
+        <!-- <li class="nav-item">
+          <div class="btn btn-primary my-btn">
+            <a class="nav-link" routerLink="/signin"> <i class="bi bi-box-arrow-in-right "
+                style="margin-right: 4px !important;"></i>logout</a>
+          </div>
+        </li> -->
+
+      </ul>
+
+    </div>
+  </div>
+</nav>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-2">
+      <div class="side-panel">
+        <h4>Quick Access</h4>
+        <ul>
+          <li routerLink="/admin" class="nav-link " routerLinkActive="active-link">
+            <a><i class="bi bi-house-door" style="margin-right: 3px;"></i>Admin panel</a>
+          </li>
+          <li class="nav-link " routerLinkActive="active-link">
+            <a (click)="toggleForm()"><i class="bi bi-plus-circle" style="margin-right: 3px;"></i>Create project</a>
+          </li>
+          <!-- <li class="active">
+            <a class="d-flex">
+              <i class="bi bi-search" style="margin-right: 3px;"></i>
+              <input type="text" class="borderless" [(ngModel)]="searchText" placeholder="Search" autocomplete="off"
+                [ngModelOptions]="{standalone: true}">
+            </a>
+          </li> -->
+          <!-- <li routerLink="/timesheet" routerLinkActive="active-link">
+            <a><i class="bi bi-card-list" style="margin-right: 3px;"></i>Timesheets</a>
+          </li> -->
+        </ul>
+
+      </div>
+    </div>
+    <div class="col-md-10">
+      <div class="row">
+        <div class="col-sm-6 col-xs-12">
+          <input type="text" class="borderless" [(ngModel)]="searchText" placeholder="Search project"  autocomplete="off"
+                [ngModelOptions]="{standalone: true}">
+        </div>
+
+        </div>
+      <table class="table table-bordered ">
+
         <thead>
           <tr>
             <th>Project Id</th>
@@ -9,8 +89,8 @@
             <th>Action</th>
           </tr>
         </thead>
-        <tbody>
-          <tr *ngFor="let project of projects">
+        <!-- <tbody>
+          <tr *ngFor="let project of projects | filter:searchText">
             <td>{{ project.id }}</td>
             <td>{{ project.projectName }}</td>
             <td>{{ project.username }}</td>
@@ -28,5 +108,76 @@
               No Data found
             </td>
           </tr>
+        </tbody> -->
+        <tbody>
+          <ng-container *ngIf="(projects | filter:searchText).length > 0; else noData">
+            <tr *ngFor="let project of projects | filter:searchText">
+              <td>{{ project.id }}</td>
+              <td>{{ project.projectName }}</td>
+              <td>{{ project.username }}</td>
+              <td>{{ project.startDate | date:'dd-MM-yyyy' }}</td>
+              <td>{{ project.endDate | date:'dd-MM-yyyy' }}</td>
+              <td>
+                <button class="btn btn-warning btn-sm text-white" style="margin-right: 4px !important;"
+                  (click)="editUser(project)">
+                  <i class="bi bi-pencil "></i>
+                </button>
+                <button class="btn btn-danger btn-sm" (click)="deleteProject(project.id)">
+                  <i class="bi bi-trash"></i>
+                </button>
+              </td>
+            </tr>
+          </ng-container>
+          <ng-template #noData>
+            <tr *ngIf="searchText && (projects | filter:searchText).length === 0">
+              <td colspan="10" class="text-center">
+                No matching data found for '{{ searchText }}'
+              </td>
+            </tr>
+            <tr *ngIf="!searchText && projects.length === 0">
+              <td colspan="10" class="text-center">
+                No Data found
+              </td>
+            </tr>
+          </ng-template>
         </tbody>
       </table>
+    </div>
+  </div>
+  <div *ngIf="isFormOpen"  class="form-container" [class.show]="isFormOpen">
+    <form [formGroup]="projectForm">
+              <!-- <span (click)="toggleForm()" class="float-right" style="cursor: pointer;">&#10006;</span>
+          <h3>Project Management </h3> -->
+          <h5>Project Management <span (click)="toggleForm()"  class=" float-right  " style="cursor: pointer;     margin-left: 82px;
+" >&#10006;</span></h5>
+
+
+          <div class="form-group mt-3">
+            <label for="projectName">Project Name</label>
+            <input type="text" class="form-control" id="projectName" formControlName="projectName">
+          </div>
+          <div class="form-group">
+            <label for="username">Project Manager</label>
+            <select class="form-control" id="username" formControlName="username">
+              <option *ngFor="let role of roles" [value]="role.username">{{ role.username }}</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="startDate">Start Date</label>
+            <input type="date" class="form-control" id="startDate" formControlName="startDate">
+          </div>
+          <div class="form-group">
+            <label for="endDate">End Date</label>
+            <input type="date" class="form-control" id="endDate" formControlName="endDate">
+            <button type="button" class="btn btn-primary myb mt-2 w-100" [disabled]="projectForm.invalid"
+              (click)="onSubmit()">
+              <span *ngIf="projectForm.value.id"> Update</span>
+              <span *ngIf="!projectForm.value.id"> Create</span>
+            </button>
+
+          </div>
+
+        </form>
+  </div>
+
+</div>

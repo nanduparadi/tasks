@@ -14,9 +14,10 @@ export class ProjectManagementComponent implements OnInit {
   projectForm: FormGroup;
   isDialogwindow = false;
   modelstyle = 'display:none';
-  selectedUser: any;
   dialogBox = false;
+  selectedUser: any;
   searchText:any;
+  p: number = 1;
 
   constructor(private fb: FormBuilder, private apiService: ApiService) {
     this.projectForm = this.fb.group({
@@ -46,6 +47,8 @@ export class ProjectManagementComponent implements OnInit {
       console.log("failed")
     })
     this.getRoles()
+    location.reload();
+
   }
   userInfo() {
     // this.isDialogwindow = true;

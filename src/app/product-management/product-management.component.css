@@ -1,0 +1,19 @@
+.alertBox {
+  /* border: 1px solid black; */
+  padding: 14px;
+  border-radius: 7px;
+  /* background-color: #f8f9fa; */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+}
+
+.iconStyle {
+  background-color: #fff;
+  border: 1px solid #dbd8d8;
+  box-shadow: none;
+  color: #000;
+  border-radius: 4px;
+  padding: 2px 9px;
+  font-size: 13px !important;
+  cursor: pointer;
+}

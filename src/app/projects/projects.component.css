@@ -1,0 +1,101 @@
+/* ********navbar css start******** */
+
+.navbar {
+  background-color: #31336e;
+}
+
+.my-btn {
+  border-radius: 50px;
+  padding: 0px 6px !important;
+}
+
+.my-btn a {
+  color: white;
+}
+
+.link-size {
+  font-weight: 500;
+
+}
+
+
+/* *********side panel start********** */
+.side-panel {
+  /* width: 200px; */
+  height: 100vh;
+  background-color: #E7E9EB;
+  padding: 15px;
+}
+
+.side-panel ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.side-panel li {
+  margin-bottom: 10px;
+  /* border-left: 3px solid rgb(49, 51, 110); */
+
+}
+
+
+.side-panel a {
+  text-decoration: none;
+  /* color: #333; */
+  color: black;
+  margin-left: 8px;
+  display: block;
+}
+
+.side-panel li:hover {
+  /* background-color: #cccccc; */
+  cursor: pointer;
+  border-left: 3px solid rgb(49, 51, 110);
+}
+
+.side-panel li:active {
+  cursor: pointer;
+  border-left: 3px solid rgb(49, 51, 110);
+}
+
+.borderless {
+  /* border: none; */
+  outline: none;
+  margin-top: 4px;
+  margin-bottom: 5px;
+  /* background-color: #E7E9EB; */
+  padding: 5px;
+    border-radius: 5px;
+    /* border-color: #ccc; */
+}
+
+
+
+/* Add this to your component's CSS file or the global styles.css file */
+
+.form-container {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  /* Adjust the height as needed */
+  width: 350px;
+  /* Adjust the width as needed */
+  /* background-color: #fff; */
+  /* Set your desired background color */
+  padding: 20px;
+  /* Add padding as needed */
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+  /* Add a box shadow for a nice visual effect */
+  z-index: 999;
+  /* Adjust the z-index as needed to ensure it's above other elements */
+  display: none;
+  /* Initially hide the form */
+  box-shadow: 0 1rem 3rem 4rem #00000026 !important;
+  background-color: #fdfeff;
+}
+
+.form-container.show {
+  display: block;
+  /* Show the form when the 'show' class is added */
+}

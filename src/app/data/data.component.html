@@ -1,0 +1,41 @@
+
+<div class="container mt-5">
+  <form [formGroup]="dataForm">
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input type="text" class="form-control" formControlName="name" />
+    </div>
+    <div class="form-group">
+      <label for="description">Description:</label>
+      <input type="text" class="form-control" formControlName="description" />
+    </div>
+    <button type="button" class="btn btn-primary" (click)="addData()">Add</button>
+    <button type="button" class="btn btn-success" (click)="updateData()">Update</button>
+    <button type="button" class="btn btn-secondary" (click)="resetForm()">Reset</button>
+
+  </form>
+
+  <table class="table mt-3">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of data">
+        <td>{{ item.id }}</td>
+        <td>{{ item.name }}</td>
+        <td>{{ item.description }}</td>
+        <td>
+          <button type="button" class="btn btn-warning" (click)="editData(item)">Edit</button>
+          <button type="button" class="btn btn-danger" (click)="deleteData(item.id)">Delete</button>
+          <button type="button" class="btn btn-primary" (click)="duplicateName()">Duplicate</button>
+
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

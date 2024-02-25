@@ -1,0 +1,16 @@
+<p>test works!</p>
+<div class="container">
+<ul class="nav justify-content-center">
+  <li class="nav-item">
+    <a class="nav-link active" aria-current="page" href="/home">Home</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" [routerLink]="['/about']"
+    (click)="btn()">About</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" [routerLink]="['/contact']">Contact</a>
+  </li>
+</ul>
+<!-- <router-outlet></router-outlet> -->
+</div>

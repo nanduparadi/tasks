@@ -117,8 +117,8 @@
           </tr>
         </tbody> -->
         <tbody>
-  <ng-container *ngIf="(projects | filter:searchText).length > 0; else noData">
-    <tr *ngFor="let project of projects | filter:searchText">
+  <ng-container *ngIf="(projects | filter:searchText).length > 0; else noData ">
+    <tr *ngFor="let project of projects | filter:searchText | paginate: { itemsPerPage: 10, currentPage: p }">
       <td>{{ project.id }}</td>
       <td>{{ project.projectName }}</td>
       <td>{{ project.username }}</td>
@@ -148,6 +148,9 @@
   </ng-template>
 </tbody>
       </table>
+      <div class="col-sm-6 pull-right text-right">
+  		<pagination-controls (pageChange)="p = $event"></pagination-controls>
+  </div>
     </div>
   </div>
 
